@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: ['https://expense-tracker-2b3u.vercel.app'],
-    methods: ['POST,GET,DELETE'],
+    methods: ['POST','GET','DELETE'],
     credentials: true,
   })
 );
