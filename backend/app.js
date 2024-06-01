@@ -30,10 +30,10 @@ app.get('/', function (req, res) {
 });
 app.listen(9000);
 
+app.get('/', (req, res) => {
+  res.send('Hello');
+});
 
-app.use("/",()=>{
-  return `hello`
-})
 console.log(__dirname);
 
 const server = () => {
