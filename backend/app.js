@@ -9,12 +9,13 @@ require('dotenv').config();
 
 const PORT = process.env.PORT;
 const CORS_URL = process.env.CORS_URL;
+
 //middlewares
 app.use(express.json());
 app.use(
   cors({
     origin: ['https://expense-tracker-2b3u.vercel.app'],
-    methods: ['POST','GET','DELETE'],
+    methods: ['POST', 'GET', 'DELETE'],
     credentials: true,
   })
 );
@@ -28,10 +29,9 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
-app.listen(9000);
 
-app.get('/', (req, res) => {
-  res.send('Hello');
+app.get('/', function (req, res) {
+  res.send('Welcome !!');
 });
 
 console.log(__dirname);
