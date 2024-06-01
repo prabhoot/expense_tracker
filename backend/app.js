@@ -12,7 +12,7 @@ const CORS_URL=process.env.CORS_URL
 //middlewares
 app.use(express.json())
 app.use(cors({
-  origin:["https://deploy-mern-1whq.vercel.app"],
+  origin:["https://expense-tracker-2b3u.vercel.app/"],
   methods:["POST,GET,DELETE"],
   credentials:true
 }))
