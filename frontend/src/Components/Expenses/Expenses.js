@@ -17,7 +17,7 @@ function Expenses() {
         <ExpenseStyled>
             <InnerLayout>
                 <h1>Expenses</h1>
-                <h2 className="total-income">Total Expense: <span>${totalExpenses()}</span></h2>
+                <h2 className="total-expense">Total Expense: <span>${totalExpenses()}</span></h2>
                 <div className="income-content">
                     <div className="form-container">
                         <ExpenseForm />
@@ -35,7 +35,7 @@ function Expenses() {
                                 date={date} 
                                 type={type}
                                 category={category} 
-                                indicatorColor="var(--color-green)"
+                                indicatorColor="var(--color-red)"
                                 deleteItem={deleteExpense}
                             />
                         })}
@@ -65,6 +65,24 @@ const ExpenseStyled = styled.div`
             font-size: 2.5rem;
             font-weight: 800;
             color: var(--color-green);
+        }
+    }
+    .total-expense{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #FCF6F9;
+        border: 2px solid #FFFFFF;
+        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+        border-radius: 20px;
+        padding: 1rem;
+        margin: 1rem 0;
+        font-size: 2rem;
+        gap: .5rem;
+        span{
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--color-red);
         }
     }
     .income-content{
