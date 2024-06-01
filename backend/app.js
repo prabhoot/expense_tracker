@@ -11,7 +11,11 @@ const PORT = process.env.PORT
 const CORS_URL=process.env.CORS_URL
 //middlewares
 app.use(express.json())
-app.use(cors(CORS_URL))
+app.use(cors({
+  origin:["https://deploy-mern-1whq.vercel.app"],
+  methods:["POST,GET,DELETE"],
+  credentials:true
+}))
 
 //routes
 readdirSync('./routes').map((route) => app.use('/api/v1', require('./routes/' + route)))
