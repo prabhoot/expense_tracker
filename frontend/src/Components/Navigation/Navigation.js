@@ -11,7 +11,7 @@ function Navigation({active, setActive}) {
             <div className="user-con">
                 <img src={avatar} alt="" />
                 <div className="text">
-                    <h2>Prabhoot</h2>
+                    <h2>Kanchan</h2>
                     <p>Manage Your Money</p>
                 </div>
             </div>
